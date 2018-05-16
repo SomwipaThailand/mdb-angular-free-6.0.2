@@ -28,10 +28,26 @@
                 "output": "/assets"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+            "styles": [{
+              "input": "node_modules/font-awesome/scss/font-awesome.scss"
+            },
+            {
+              "input": "scss/bootstrap/bootstrap.scss"
+            },
+            {
+              "input": "scss/mdb-free.scss"
+            },
+            {
+              "input": "src/styles.scss"
+            }
+          ],
+          "scripts": [{
+              "input": "node_modules/chart.js/dist/Chart.js"
+            },
+            {
+              "input": "node_modules/hammerjs/hammer.min.js"
+            }
+          ]
           },
           "configurations": {
             "production": {
