@@ -7,10 +7,20 @@ import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
 import { MDBBootstrapModule } from './typescripts/free';
 import { FormsModule } from '@angular/forms';
+import { SpeculateWaterComponent } from './speculate-water/speculate-water.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { LogInComponent } from './log-in/log-in.component';
+import { DocumentComponent } from './document/document.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SpeculateWaterComponent,
+    FooterComponent,
+    NavBarComponent,
+    LogInComponent,
+    DocumentComponent
   ],
   imports: [
     BrowserModule,
