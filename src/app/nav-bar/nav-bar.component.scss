@@ -15,5 +15,11 @@
 @media only screen and (max-width: 768px) {
     .navbar {
         background-color: #4285F4;
+        background: #4285F4;
     }
+}
+
+.img-fluid{
+    max-width: 100%; 
+    height: auto;
 }
