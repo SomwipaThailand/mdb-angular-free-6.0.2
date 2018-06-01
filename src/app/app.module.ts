@@ -16,9 +16,14 @@ import { DocumentComponent } from './document/document.component';
 import { BulletinComponentComponent } from './bulletin-component/bulletin-component.component';
 import { ContractUsComponent } from './contract-us/contract-us.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { ManageWaterDryComponent } from './manage-water-dry/manage-water-dry.component';
+import { ManageWaterRainComponent } from './manage-water-rain/manage-water-rain.component';
+import { ProtectRainComponent } from './protect-rain/protect-rain.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const appRoutes: Routes = [
   { path: 'to-contract-us', component: ContractUsComponent },
+  { path: 'to-about-us', component: AboutUsComponent },
   { path: '**', component: HomeComponentComponent }
 ];
 
@@ -32,7 +37,11 @@ const appRoutes: Routes = [
     DocumentComponent,
     BulletinComponentComponent,
     ContractUsComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    ManageWaterDryComponent,
+    ManageWaterRainComponent,
+    ProtectRainComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
