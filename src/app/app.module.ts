@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
@@ -13,6 +14,13 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { DocumentComponent } from './document/document.component';
 import { BulletinComponentComponent } from './bulletin-component/bulletin-component.component';
+import { ContractUsComponent } from './contract-us/contract-us.component';
+import { HomeComponentComponent } from './home-component/home-component.component';
+
+const appRoutes: Routes = [
+  { path: 'to-contract-us', component: ContractUsComponent },
+  { path: '**', component: HomeComponentComponent }
+];
 
 @NgModule({
   declarations: [
@@ -22,7 +30,9 @@ import { BulletinComponentComponent } from './bulletin-component/bulletin-compon
     NavBarComponent,
     LogInComponent,
     DocumentComponent,
-    BulletinComponentComponent
+    BulletinComponentComponent,
+    ContractUsComponent,
+    HomeComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +42,11 @@ import { BulletinComponentComponent } from './bulletin-component/bulletin-compon
     AgmCoreModule.forRoot({
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key
       apiKey: 'Your_api_key'
-    })
+    }),
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent],
