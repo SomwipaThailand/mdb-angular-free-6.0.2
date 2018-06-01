@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { DocumentComponent } from './document/document.component';
+import { BulletinComponentComponent } from './bulletin-component/bulletin-component.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DocumentComponent } from './document/document.component';
     FooterComponent,
     NavBarComponent,
     LogInComponent,
-    DocumentComponent
+    DocumentComponent,
+    BulletinComponentComponent
   ],
   imports: [
     BrowserModule,
