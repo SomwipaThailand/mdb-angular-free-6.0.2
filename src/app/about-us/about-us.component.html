@@ -20,4 +20,78 @@
   <!-- /.Main -->
 </header>
 <!--Main Navigation-->
-                
+
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark default-color ie-nav" [containerInside]="false">
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active waves-light" (click)="openCity($event, 'structure')" id="defaultOpen" mdbWavesEffect>
+        <a class="nav-link">โครงสร้างหน่วยงาน
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item waves-light" (click)="openCity($event, 'employee')" mdbWavesEffect>
+        <a class="nav-link">บุคลากรในหน่วยงาน</a>
+      </li>
+      <li class="nav-item waves-light" (click)="openCity($event, 'seat')" mdbWavesEffect>
+        <a class="nav-link">ทำเนียบหัวหน้าฝ่ายจัดสรรน้ำที่ 2</a>
+      </li>
+      <li class="nav-item waves-light" (click)="openCity($event, 'role')" mdbWavesEffect>
+        <a class="nav-link">หน้าที่ความรับผิดชอบ</a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>
+<!-- Main -->
+<main>
+  <div class="row">
+    <div class="col-lg-1 col-md-12 mb-lg-0 mb-5"></div>
+    <div class="col-lg-10 col-md-12 mb-lg-0 mb-5">
+      <div id="structure" class="tabcontent">
+        <div class="structure"></div>
+      </div>
+
+      <div id="employee" class="tabcontent">
+        <app-team></app-team>
+      </div>
+
+      <div id="seat" class="tabcontent">
+        <!--Panel-->
+        <div class="card">
+          <h3 class="card-header primary-color white-text">ศูนย์ปฏิบัติการจัดสรรน้ำ</h3>
+          <div class="card-body">
+            <h4 class="card-title">นายเพิ่มพร โสภณางกูร</h4>
+            <p class="card-text">เริ่มดำรงตำแหน่งวันที่ 3 กุมภาพันธ์ 2546 ถึง 2 กันยายน 2553</p>
+            <br>
+            <h4 class="card-title">ว่าที่ ร.ท.ธาดา พูนทวี</h4>
+            <p class="card-text">เริ่มดำรงตำแหน่งวันที่ 3 กันยายน 2553 ถึง 6 เมษายน 2558</p>
+          </div>
+        </div>
+        <!--/.Panel-->
+
+        <br>
+
+        <!--Panel-->
+        <div class="card">
+          <h3 class="card-header primary-color white-text">ฝ่ายจัดสรรน้ำที่ 2</h3>
+          <div class="card-body">
+            <h4 class="card-title">นายสันติ เต็มเอี่ยม</h4>
+            <p class="card-text">เริ่มดำรงตำแหน่งวันที่ 7 เมษายน 2558 ถึง 6 มีนาคม 2559</p>
+            <p class="card-text">รักษาการในตำแหน่งวันที่ 7 มีนาคม 2559 ถึง 7 กรกฎาคม 2559</p>
+            <p class="card-text">รักษาการในตำแหน่งวันที่ 24 พฤษภาคม 2561 ถึง ปัจจุบัน</p>
+            <br>
+            <h4 class="card-title">นายเลิศพันธ์ สุขยิรัญ</h4>
+            <p class="card-text">เริ่มดำรงตำแหน่งวันที่ 8 กรกฎาคม 2559 ถึง 23 พฤษภาคม 2561</p>
+          </div>
+        </div>
+        <!--/.Panel-->
+      </div>
+
+      <div id="role" class="tabcontent">
+        <h3>role</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+    </div>
+    <div class="col-lg-1 col-md-12 mb-lg-0 mb-5"></div>
+  </div>
+</main>
+<!-- /.Main -->

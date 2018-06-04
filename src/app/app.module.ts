@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { InputsModule, WavesModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
 
@@ -20,10 +21,13 @@ import { ManageWaterDryComponent } from './manage-water-dry/manage-water-dry.com
 import { ManageWaterRainComponent } from './manage-water-rain/manage-water-rain.component';
 import { ProtectRainComponent } from './protect-rain/protect-rain.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { TeamComponent } from './team/team.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
   { path: 'to-contract-us', component: ContractUsComponent },
   { path: 'to-about-us', component: AboutUsComponent },
+  { path: 'to-login', component: LoginComponent },
   { path: '**', component: HomeComponentComponent }
 ];
 
@@ -41,7 +45,9 @@ const appRoutes: Routes = [
     ManageWaterDryComponent,
     ManageWaterRainComponent,
     ProtectRainComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    TeamComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 <!-- <app-log-in></app-log-in> -->
-<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" [containerInside]="false">
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" [containerInside]="false" *ngIf="!isOn">
         <!-- class ที่ลบอก  intro-fixed-nav top-nav-collapse  -->
         <logo>
           <a class="logo navbar-brand" href="#">
@@ -72,7 +72,12 @@
               <a class="nav-link" routerLink="/to-contract-us" routerLinkActive="active">ติดต่อเรา</a>
             </li>
           </ul>
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item waves-light" mdbWavesEffect>
+                <a class="nav-link"><i class="fa fa-user" mdbTooltip="Admin" (click)="isOn == true" routerLink="/to-login" routerLinkActive="active" placement="left"></i></a>
+            </li>
+        </ul>
         </links>
       </mdb-navbar>
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<!-- <app-footer></app-footer> -->
