@@ -10,9 +10,7 @@ import { AgmCoreModule } from '@agm/core';
 import { MDBBootstrapModule } from './typescripts/free';
 import { FormsModule } from '@angular/forms';
 import { SpeculateWaterComponent } from './speculate-water/speculate-water.component';
-import { FooterComponent } from './footer/footer.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { LogInComponent } from './log-in/log-in.component';
 import { DocumentComponent } from './document/document.component';
 import { BulletinComponentComponent } from './bulletin-component/bulletin-component.component';
 import { ContractUsComponent } from './contract-us/contract-us.component';
@@ -22,22 +20,20 @@ import { ManageWaterRainComponent } from './manage-water-rain/manage-water-rain.
 import { ProtectRainComponent } from './protect-rain/protect-rain.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { TeamComponent } from './team/team.component';
-import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
   { path: 'to-contract-us', component: ContractUsComponent },
   { path: 'to-about-us', component: AboutUsComponent },
-  { path: 'to-login', component: LoginComponent },
-  { path: '**', component: HomeComponentComponent }
+  { path: '**', component: HomeComponentComponent, children: [
+    {path: 'to-speculate', component: SpeculateWaterComponent }
+  ] }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     SpeculateWaterComponent,
-    FooterComponent,
     NavBarComponent,
-    LogInComponent,
     DocumentComponent,
     BulletinComponentComponent,
     ContractUsComponent,
@@ -46,8 +42,7 @@ const appRoutes: Routes = [
     ManageWaterRainComponent,
     ProtectRainComponent,
     AboutUsComponent,
-    TeamComponent,
-    LoginComponent
+    TeamComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +55,8 @@ const appRoutes: Routes = [
     }),
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true }
+      { enableTracing: true,
+        useHash: false }
     )
   ],
   providers: [],

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ReactiveFormsModule, FormControl, FormsModule } from '@angular/forms';
 import { AgmMap } from '@agm/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,12 @@ import { AgmMap } from '@agm/core';
 })
 export class AppComponent implements OnInit {
 
-  isOn: boolean;
   ngOnInit() {
-    this.isOn = false;
+
+  }
+
+  goToSpeculate(id) {
+    document.getElementById(id).scrollIntoView();
   }
 
 }
